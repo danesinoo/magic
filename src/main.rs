@@ -1,4 +1,3 @@
-mod env_var;
 mod functions;
 mod impostazioni;
 use eframe::*;
