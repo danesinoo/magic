@@ -52,7 +52,7 @@ fn cambia_colore(ui: &mut egui::Ui, colore: &mut Color32, size: &f32) {
     ui.add_space(10. * size);
 }
 
-pub fn modifica_impostazioni(size: &f32, colore: &Color32) { // color_edit_button_rgb() non modifica l'array che gli viene date
+fn modifica_impostazioni(size: &f32, colore: &Color32) { // color_edit_button_rgb() non modifica l'array che gli viene date
     let mut file = File::create("./.info.stg").unwrap();
     file.write_all(format!("{}\n{}\n{}\n{}\n{}", 
         *size, colore.r(), colore.g(), colore.b(), colore.a()).as_bytes()).unwrap();    // si poteva anche usafe Colors32::to_array()
