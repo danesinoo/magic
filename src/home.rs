@@ -1,32 +1,35 @@
 use eframe::{*, Frame};
 use eframe::egui::{Frame as Sfondo};
 use eframe::epaint::Color32;
-use crate::{functions::*};
 
 pub struct Home {
     pub size: f32,
     pub fill: Color32,
-    pub option: u8
+    pub option: u8,
+    pub font: egui::FontDefinitions
 }
 
 impl Home {
     pub fn new() -> Self {
-        let info = Info::new();
+        let info = crate::impostazioni::Info::new();
         Home {
             size: info.size,
             fill: info.color(),
-            option: 0
+            option: 0,
+            font: info.font
         }
     }
 }
 
 impl eframe::App for Home {
     fn update(&mut self, ctx: &egui::Context, frame: &mut Frame) {
+        // dovrei trovare un modo per 
+        ctx.set_fonts(self.font.clone());  // imposto il font
+        let mut font= self.font.font_data.get_mut("my_font").unwrap();
+        font.tweak.scale = 1.7 * self.size;
 
-        ctx.set_fonts(font(&self.size));  // imposto il font
 
         frame.set_window_size(egui::vec2(200. * self.size, 200. * self.size));
-
         let mut sfondo: Sfondo = Sfondo::default();
         sfondo = sfondo.fill(self.fill); // imposto il colore
             
@@ -49,7 +52,12 @@ impl eframe::App for Home {
                     }
 
                     else if self.option == 3 {
-                        crate::impostazioni::impostazioni(ui, &mut self.option, &mut self.fill, &mut self.size, &mut frame.output.window_size);
+                        crate::impostazioni::impostazioni(
+                            ui, 
+                            &mut self.option, 
+                            &mut self.fill, 
+                            &mut self.size, 
+                            &mut frame.output.window_size);
                     }
                 });
             });

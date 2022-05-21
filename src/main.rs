@@ -1,4 +1,3 @@
-mod functions;
 mod impostazioni;
 use eframe::*;
 use eframe::emath::Vec2;
@@ -12,5 +11,6 @@ fn main() {
 	let mut native_options = NativeOptions::default();
     native_options.initial_window_size = Some(Vec2::new(200.* home.size, 200.* home.size));
     native_options.resizable = false;
+
     run_native("Magic", native_options, Box::new(|_cc: &CreationContext| Box::new(home)));
 }

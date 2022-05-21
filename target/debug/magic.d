@@ -1,1 +1,1 @@
-/Users/carlorosso/Documents/rust/magic/target/debug/magic: /Users/carlorosso/Documents/rust/magic/cmunbx.ttf /Users/carlorosso/Documents/rust/magic/src/functions.rs /Users/carlorosso/Documents/rust/magic/src/home.rs /Users/carlorosso/Documents/rust/magic/src/impostazioni.rs /Users/carlorosso/Documents/rust/magic/src/main.rs
+/Users/carlorosso/Documents/magic/target/debug/magic: /Users/carlorosso/Documents/magic/cmunbx.ttf /Users/carlorosso/Documents/magic/src/home.rs /Users/carlorosso/Documents/magic/src/impostazioni.rs /Users/carlorosso/Documents/magic/src/main.rs
