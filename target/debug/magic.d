@@ -1,1 +1,0 @@
-/Users/carlorosso/Documents/magic/target/debug/magic: /Users/carlorosso/Documents/magic/cmunbx.ttf /Users/carlorosso/Documents/magic/src/home.rs /Users/carlorosso/Documents/magic/src/impostazioni.rs /Users/carlorosso/Documents/magic/src/main.rs
