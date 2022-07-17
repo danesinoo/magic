@@ -9,5 +9,4 @@ In the end, from the excell file I would like to build another excell file which
 
 As you can see it's all built in rust:
   - I used **eframe** to build the ui;
-  
-  ... here on I will add the crates out of the std I'm gonna use, though they are easly accessible in the Cargo.toml file: in there you can check the version of each package as well
+
